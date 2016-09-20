@@ -24,5 +24,5 @@ func DetachVol(c *cli.Context) error {
 		return nil
 	}
 
-	return fmt.Errorf("Not enough agrs for detach call")
+	return ErrIncorrectArgNumber
 }

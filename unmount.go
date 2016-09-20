@@ -21,7 +21,8 @@ func UnmountVol(c *cli.Context) error {
 			return err
 		}
 		Success().Print()
+		return nil
 	}
 
-	return fmt.Errorf("Not enough arguements")
+	return ErrIncorrectArgNumber
 }

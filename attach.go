@@ -31,5 +31,5 @@ func AttachVol(c *cli.Context) error {
 		return nil
 	}
 
-	return fmt.Errorf("Not enough args for attach call")
+	return ErrIncorrectArgNumber
 }
