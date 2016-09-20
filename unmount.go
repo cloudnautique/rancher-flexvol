@@ -1,6 +1,10 @@
 package flexvol
 
-import "github.com/urfave/cli"
+import (
+	"fmt"
+
+	"github.com/urfave/cli"
+)
 
 func UnmountCommand() cli.Command {
 	return cli.Command{
@@ -19,5 +23,5 @@ func UnmountVol(c *cli.Context) error {
 		Success().Print()
 	}
 
-	return nil
+	return fmt.Errorf("Not enough arguements")
 }
